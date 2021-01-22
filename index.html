@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        .showbrand{
+            display: none;
+        }
+
+    </style>
+    <title>Bakery</title>
+    </head>
+    <body style="background-color: #171923;color: whitesmoke;">
+      
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark " style="background-color: #1B212D;">
+            <div class="container-fluid">
+              <a  class="navbar-brand" href="#"><h1 class="display-4 d-none" id="brandName" style="font-weight: 400;color: #4FD1C5;font-size: 30px;">Bakery</h1></a>
+              <button style="border: none;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav " style="margin-left: auto;">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+        
+        <div class="jumbotron" style="margin-bottom: 50px;background-color: #1B212D;">
+           <div class="container ">
+            <div class="row justify-content-center">
+                <div class="col-auto" style="text-align: center;">
+                    <h1 class="display-1" style="font-weight: 400;color: #4FD1C5;">Bakery</h1>
+            <p class="display-4" style="color: #9A9DA2;font-size: 30px;">The best blah blah blah blah.</p>
+           </div>
+                </div>
+            </div>
+          </div>
+        
+          <div class="container" style="margin-bottom: 100px;">
+
+            <div class="row justify-content-center" >
+                <div class="col-12 col-md-3" style="margin: 5px;">
+                    <div class="card" style="width: 100%;background-color: #2D3748;height:100%;">
+                        <img src="https://sugargeekshow.com/wp-content/uploads/2020/03/rainbow-cake-featured-scaled.jpg" class="card-img-top" style="max-height: 200px;" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Rainbow Cake</h5>
+                          <p class="card-text" style="color:#9A9DA2;">Not only is this rainbow cake beautiful and colorful, but it also tastes really delicious.</p>
+                          
+                        </div>
+                        <div class="card-footer">
+                          <div class="form-group row">
+                            <div class="col" style="padding-top: 8px;color:#9A9DA2">
+                            &#8377 900 / kg
+                          </div>
+                            <button style="border: none;" onclick="addCart('Rainbow Cake')" style="margin-left: auto;" class="btn btn-outline-secondary col-2">+</button>
+                            <div id="Rainbow Cake" class="col-2 align-middle text-center" style="text-align: center;padding-top: 8px;">
+                              0
+                            </div>
+                            <button style="border: none;" onclick="removeCart('Rainbow Cake')" 
+                            disabled id="Rainbow Cake remove"
+                            class="btn btn-outline-secondary col-2">-</button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-3" style="margin: 5px;">
+                    <div class="card" style="width: 100%;height:100%;background-color: #2D3748;">
+                        <img src="https://www.handletheheat.com/wp-content/uploads/2018/08/Best-Chocolate-Cake-SQUARE.jpg" class="card-img-top" style="max-height: 200px;" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Choco Hazelnut Cake - Eggless</h5>
+                          <p class="card-text" style="color:#9A9DA2;">Our signature creation made with premium Belgian chocolate, complemented by crunch of California almonds & hazelnut praline. </p>
+                          
+                        </div>
+                        <div class="card-footer">
+                          <div class="form-group row">
+                            <div class="col" style="padding-top: 8px;color:#9A9DA2">
+                            &#8377 1300 / kg
+                          </div>
+                            <button style="border: none;" onclick="addCart('Choco Hazelnut Cake - Eggless')" style="margin-left: auto;" class="btn btn-outline-secondary col-2">+</button>
+                            <div id="Choco Hazelnut Cake - Eggless" class="col-2 align-middle text-center" style="text-align: center;padding-top: 8px;">
+                              0
+                            </div>
+                            <button style="border: none;" onclick="removeCart('Choco Hazelnut Cake - Eggless')" 
+                            disabled id="Choco Hazelnut Cake - Eggless remove"
+                            class="btn btn-outline-secondary col-2">-</button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-3" style="margin: 5px;">
+                    <div class="card" style="width: 100%;background-color: #2D3748;height:100%;">
+                        <img src="https://saltandbaker.com/wp-content/uploads/2019/01/funfetti-cake-6.jpg" class="card-img-top" style="max-height: 200px;" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Funfetti Cake</h5>
+                          <p class="card-text" style="color:#9A9DA2;">The best Birthday Cake ! You get a pillowy soft and tender, perfectly light and fluffy funfetti style cake that’s generously dotted with rainbow sprinkles and it’s swirled with a classic birthday cake and vanilla flavor.</p>
+                        </div>
+                        <div class="card-footer">
+                          <div class="form-group row">
+                            <div class="col" style="padding-top: 8px;color:#9A9DA2">
+                            &#8377 800 / kg
+                          </div>
+                            <button style="border: none;" onclick="addCart('Funfetti Cake')" style="margin-left: auto;" class="btn btn-outline-secondary col-2">+</button>
+                            <div id="Funfetti Cake" class="col-2 align-middle text-center" style="text-align: center;padding-top: 8px;">
+                              0
+                            </div>
+                            <button style="border: none;" onclick="removeCart('Funfetti Cake')" 
+                            disabled id="Funfetti Cake remove"
+                            class="btn btn-outline-secondary col-2">-</button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                </div>
+            </div>
+         
+
+            <div class="row justify-content-center" style="margin-top: 30px;">
+                <div class="col-12 col-md-3" style="margin: 5px;">
+                    <div class="card" style="width: 100%;background-color: #2D3748;height:100%;">
+                        <img src="https://www.warmoven.in/media/catalog/product/cache/e4dbbe88580d6bb18ca174b8700f08f3/image/14583601/smash-cake-customizable.jpg" class="card-img-top" style="max-height: 200px;" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Smash cake</h5>
+                          <p class="card-text" style="color:#9A9DA2;">A smash cake is a tiny cake covered with an extra thick layer of frosting in a colour of your choice. Although edible, a smash cake is more fun when it is smashed, pounded and spread on your friend’s face!.</p>
+                          
+                        </div>
+                        <div class="card-footer">
+                          <div class="form-group row">
+                            <div class="col" style="padding-top: 8px;color:#9A9DA2">
+                            &#8377 750 - 1/2 kg
+                          </div>
+                            <button style="border: none;" onclick="addCart('Smash cake')" style="margin-left: auto;" class="btn btn-outline-secondary col-2">+</button>
+                            <div id="Smash cake" class="col-2 align-middle text-center" style="text-align: center;padding-top: 8px;">
+                              0
+                            </div>
+                            <button style="border: none;" onclick="removeCart('Smash cake')" 
+                            disabled id="Smash cake remove"
+                            class="btn btn-outline-secondary col-2">-</button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-3" style="margin: 5px;">
+                    <div class="card" style="width: 100%;background-color: #2D3748;height:100%;">
+                        <img src="https://www.zelorra.com/grocery/wp-content/uploads/2020/06/Butterscotch_4.jpg" class="card-img-top" style="max-height: 200px;" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Butter Scotch Cake - Eggless</h5>
+                          <p class="card-text" style="color:#9A9DA2;">The unique caramel butterscotch themselves create a dream-like sensation to infuse euphoria. </p>
+                          
+                        </div>
+                        <div class="card-footer">
+                          <div class="form-group row">
+                            <div class="col" style="padding-top: 8px;color:#9A9DA2">
+                            &#8377 1100 / kg
+                          </div>
+                            <button style="border: none;" onclick="addCart('Butter Scotch Cake - Eggless')" style="margin-left: auto;" class="btn btn-outline-secondary col-2">+</button>
+                            <div id="Butter Scotch Cake - Eggless" class="col-2 align-middle text-center" style="text-align: center;padding-top: 8px;">
+                              0
+                            </div>
+                            <button style="border: none;" onclick="removeCart('Butter Scotch Cake - Eggless')" 
+                            disabled id="Butter Scotch Cake - Eggless remove"
+                            class="btn btn-outline-secondary col-2">-</button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-3" style="margin: 5px;">
+                    <div class="card" style="width: 100%;background-color: #2D3748;height:100%;">
+                        <img src="https://cdn.igp.com/f_auto,q_auto,t_prodm/products/p-classic-red-velvet-cake-1-kg--109231-m.jpg" class="card-img-top" style="max-height: 200px;" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Classic Red Velvet Cake</h5>
+                          <p class="card-text" style="color:#9A9DA2;">Layered with blushed cherry color and white cream cheese, this Red Velvet delicacy is undeniably irresistible. Garnished with little heart shaped crimson colored frosting - a sinful surprise, melt hearts with this baker's perfection.</p>
+                          
+                        </div>
+                        <div class="card-footer">
+                          <div class="form-group row">
+                            <div class="col" style="padding-top: 8px;color:#9A9DA2">
+                            &#8377 1600 / kg
+                          </div>
+                            <button style="border: none;" onclick="addCart('Classic Red Velvet Cake')" style="margin-left: auto;" class="btn btn-outline-secondary col-2">+</button>
+                            <div id="Classic Red Velvet Cake" class="col-2 align-middle text-center" style="text-align: center;padding-top: 8px;">
+                              0
+                            </div>
+                            <button style="border: none;" onclick="removeCart('Classic Red Velvet Cake')" 
+                            disabled id="Classic Red Velvet Cake remove"
+                            class="btn btn-outline-secondary col-2">-</button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+
+            <div class="row justify-content-center" style="margin-top: 100px;">
+                <div class="col-12 col-md-2" style="margin: 5px;">
+                    <div class="card" style="width: 100%;background-color: #2D3748;height:100%;">
+                        <img src="https://www.handletheheat.com/wp-content/uploads/2018/02/BAKERY-STYLE-CHOCOLATE-CHIP-COOKIES-9.jpg" class="card-img-top" style="max-height: 100px;" alt="...">
+                        <div class="card-body">
+                          <h6 class="card-title">Chocolate Chip Cookies</h6>
+                          <p class="card-text" style="color:#9A9DA2;font-size:13px">Ultra thick Bakery Style Chocolate Chip Cookies feature golden brown edges with ooey and gooey centers.</p>
+                          
+                        </div>
+                        <div class="card-footer">
+                          <div class="form-group row">
+                            <div class="col" style="padding-top: 8px;color:#9A9DA2">
+                            &#8377 300
+                          </div>
+                            <button style="border: none;" onclick="addCart('Chocolate Chip Cookies')" style="margin-left: auto;" class="btn btn-outline-secondary col-2">+</button>
+                            <div id="Chocolate Chip Cookies" class="col-2 align-middle text-center" style="text-align: center;padding-top: 8px;">
+                              0
+                            </div>
+                            <button style="border: none;" onclick="removeCart('Chocolate Chip Cookies')" 
+                            disabled id="Chocolate Chip Cookies remove"
+                            class="btn btn-outline-secondary col-2">-</button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-2" style="margin: 5px;">
+                    <div class="card" style="width: 100%;background-color: #2D3748;height:100%;">
+                        <img src="https://www.livewellbakeoften.com/wp-content/uploads/2019/07/Thumbprint-Cookies-10-5.jpg" class="card-img-top" style="max-height: 100px;" alt="...">
+                        <div class="card-body">
+                          <h6 class="card-title">Thumbprint Cookies</h6>
+                          <p class="card-text" style="color:#9A9DA2;font-size:13px">Delicious buttery shortbread cookies filled with strawberry and apricot jam. These Thumbprint Cookies are perfect for the holidays or any occasion!</p>
+                          
+                        </div>
+                        <div class="card-footer">
+                          <div class="form-group row">
+                            <div class="col" style="padding-top: 8px;color:#9A9DA2">
+                            &#8377 300
+                          </div>
+                            <button style="border: none;" onclick="addCart('Thumbprint Cookies')" style="margin-left: auto;" class="btn btn-outline-secondary col-2">+</button>
+                            <div id="Thumbprint Cookies" class="col-2 align-middle text-center" style="text-align: center;padding-top: 8px;">
+                              0
+                            </div>
+                            <button style="border: none;" onclick="removeCart('Thumbprint Cookies')" 
+                            disabled id="Thumbprint Cookies remove"
+                            class="btn btn-outline-secondary col-2">-</button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-2" style="margin: 5px;">
+                    <div class="card" style="width: 100%;background-color: #2D3748;height:100%;">
+                        <img src="https://static01.nyt.com/images/2018/11/20/dining/ar-sugar-cookies/ar-sugar-cookies-articleLarge.jpg" class="card-img-top" style="max-height: 100px;" alt="...">
+                        <div class="card-body">
+                          <h6 class="card-title">Frosted Holiday Sugar Cookies</h6>
+                          <p class="card-text" style="color:#9A9DA2;font-size:13px">Whether you're making Santas or dreidls, shamrocks or bunnies, this foolproof cookie and royal icing is the only one you need.</p>
+                          
+                        </div>
+                        <div class="card-footer">
+                          <div class="form-group row">
+                            <div class="col" style="padding-top: 8px;color:#9A9DA2">
+                            &#8377 500
+                          </div>
+                            <button style="border: none;" onclick="addCart('Frosted Holiday Sugar Cookies')" style="margin-left: auto;" class="btn btn-outline-secondary col-2">+</button>
+                            <div id="Frosted Holiday Sugar Cookies" class="col-2 align-middle text-center" style="text-align: center;padding-top: 8px;">
+                              0
+                            </div>
+                            <button style="border: none;" onclick="removeCart('Frosted Holiday Sugar Cookies')" 
+                            disabled id="Frosted Holiday Sugar Cookies remove"
+                            class="btn btn-outline-secondary col-2">-</button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-2" style="margin: 5px;">
+                    <div class="card" style="width: 100%;background-color: #2D3748;height:100%;">
+                        <img src="https://dinnerthendessert.com/wp-content/uploads/2015/06/Oreo-Chunk-Cookies.jpg" class="card-img-top" style="max-height: 100px;" alt="...">
+                        <div class="card-body">
+                          <h6 class="card-title">Oreo Chunk Cookies</h6>
+                          <p class="card-text" style="color:#9A9DA2;font-size:13px">Oreo Chunk Cookie makes a delicious new buttery, chewy cookie using another cookie as the featured ingredient. It’s double-cookie perfection!</p>
+                        </div>
+                        <div class="card-footer">
+                          <div class="form-group row">
+                            <div class="col" style="padding-top: 8px;color:#9A9DA2">
+                            &#8377 400
+                          </div>
+                            <button style="border: none;" onclick="addCart('Oreo Chunk Cookies')" style="margin-left: auto;" class="btn btn-outline-secondary col-2">+</button>
+                            <div id="Oreo Chunk Cookies" class="col-2 align-middle text-center" style="text-align: center;padding-top: 8px;">
+                              0
+                            </div>
+                            <button style="border: none;" onclick="removeCart('Oreo Chunk Cookies')" 
+                            disabled id="Oreo Chunk Cookies remove"
+                            class="btn btn-outline-secondary col-2">-</button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-2" style="margin: 5px;">
+                    <div class="card" style="width: 100%;background-color: #2D3748;height:100%;">
+                        <img src="https://cdn3.tmbi.com/toh/GoogleImagesPostCard/Quick-Chocolate-Sandwich-Cookies_exps12928_CK133085D05_07_5bC_RMS.jpg" class="card-img-top" style="max-height: 100px;" alt="...">
+                        <div class="card-body">
+                          <h6 class="card-title">Cookie Sandwiches</h6>
+                          <p class="card-text" style="color:#9A9DA2;font-size:13px">These cookies freeze well, so it's easy to keep some on hand for last-minute munching.</p>
+                          
+                          
+                      </div>
+                      <div class="card-footer">
+                        <div class="form-group row">
+                          <div class="col" style="padding-top: 8px;color:#9A9DA2">
+                            &#8377 500
+                          </div>
+                          <button style="border: none;" onclick="addCart('Cookie Sandwiches')" style="margin-left: auto;" class="btn btn-outline-secondary col-2">+</button>
+                          <div id="Cookie Sandwiches" class="col-2 align-middle text-center" style="text-align: center;padding-top: 8px;">
+                            0
+                          </div>
+                          <button style="border: none;" style="border: none;" onclick="removeCart('Cookie Sandwiches')" 
+                          disabled id="Cookie Sandwiches remove"
+                          class="btn btn-outline-secondary col-2">-</button>
+                        </div>
+                       
+                      </div>
+                    </div>
+                </div>
+                
+                <div style="background-color: #011627;">
+                    <div class="container">
+                        
+                    </div>
+                </div>
+            </div>
+
+
+          </div>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+          <script>
+              window.addEventListener("scroll", function(event) {
+                    var top = this.scrollY,
+                        left =this.scrollX;
+                        if(top<50)
+                        {
+                            $('#brandName').addClass('d-none');
+                            
+                        }else{
+                            $('#brandName').removeClass('d-none')
+
+                        }
+
+
+                }, false);
+
+          window.onload=()=>{
+            let c=sessionStorage.getItem("cart")
+            if(c)
+            {
+              c=JSON.parse(c)
+              Object.keys(c).forEach((val)=>{
+                let a=parseInt(document.getElementById(val).innerText)
+            document.getElementById(val).innerText=a+c[val]
+            document.getElementById(val+" remove").disabled = false;
+              })
+            }
+          }
+          function removeCart(val)
+          {
+            let a=parseInt(document.getElementById(val).innerText)
+            document.getElementById(val).innerText=a-1
+            if(a==1)
+            document.getElementById(val+" remove").disabled = true;
+
+            let c=sessionStorage.getItem("cart")
+            if(c)
+            {
+            c=JSON.parse(c)
+            if(c[val]>1)
+            c[val]-=1
+            else
+            delete c[val]
+            sessionStorage.setItem('cart',JSON.stringify(c));
+            }
+           
+            
+          }
+          function addCart(val)
+          {
+            let a=parseInt(document.getElementById(val).innerText)
+            document.getElementById(val).innerText=a+1
+            document.getElementById(val+" remove").disabled = false;
+            let c=sessionStorage.getItem("cart")
+            if(!c)
+            c={}
+            else
+            c=JSON.parse(c)
+            if(c[val])
+            c[val]+=1
+            else
+            c[val]=1
+            sessionStorage.setItem('cart',JSON.stringify(c));
+            console.log(sessionStorage.getItem("cart"))
+          }
+          </script>
+        </body>
+</html>
