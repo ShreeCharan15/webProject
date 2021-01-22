@@ -340,7 +340,14 @@
                 </div>
             </div>
 
-
+			<button onclick="showCart()">Cart</button>
+			<ul class="list-group" id="cartItems">
+  <li class="list-group-item disabled">Cras justo odio</li>
+  <li class="list-group-item">Dapibus ac facilisis in</li>
+  <li class="list-group-item">Morbi leo risus</li>
+  <li class="list-group-item">Porta ac consectetur ac</li>
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul>
           </div>
           <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -410,6 +417,14 @@
             sessionStorage.setItem('cart',JSON.stringify(c));
             console.log(sessionStorage.getItem("cart"))
           }
+		  function showCart(){
+			let c=sessionStorage.getItem("cart")
+            if(c)
+            {
+            c=JSON.parse(c)
+			document.getElementById("cartItems").innerHTML="<ul>"+Object.keys(c).map((c,i)=>"<li>"+c+"</li>")+"</ul>"
+			}
+		  }
           </script>
         </body>
 </html>
